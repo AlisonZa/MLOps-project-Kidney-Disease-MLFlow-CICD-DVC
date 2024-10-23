@@ -15,10 +15,13 @@ class PredictionPipeline():
 
 
     def predict(self):
-        # load model
+        # load model (alterado para a fase docker, se quiser puxe pelo que foi gerado pela pipeline pode descomentar isso daqui)
+        # model = load_model(os.path.join(
+        #     "artifacts", "training", "trained_model.h5"
+        # )) 
         model = load_model(os.path.join(
-            "artifacts", "training", "trained_model.h5"
-        )) 
+            "model", "model.h5"
+        ))
         image_name = self.filename
         test_image = load_img(image_name, target_size= (224, 224))
         test_image = img_to_array(test_image)
