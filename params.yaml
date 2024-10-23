@@ -1,1 +1,12 @@
-key: value
+# Utilized during preparation (stage 02)
+INCLUDE_TOP: False # dont want tops of the model
+CLASSES: 2
+WEIGHTS: imagenet
+LEARNING_RATE: 0.01
+IMAGE_SIZE: [224,224,3] # in model documentation
+
+# Utilized during training (stage 03)
+AUGUMENTATION: True
+BATCH_SIZE: 64
+EPOCHS: 1
+# IMAGE_SIZE: [224,224,3] # in model documentation both of them
