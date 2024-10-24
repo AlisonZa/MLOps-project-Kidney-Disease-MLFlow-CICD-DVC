@@ -16,5 +16,6 @@ types-PyYAML
 scipy
 Flask
 Flask-Cors
+python-dotenv
 gdown
 -e . 
